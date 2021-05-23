@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
     //initialising all the variables casting them to main activity
@@ -23,36 +24,62 @@ class MainActivity : AppCompatActivity() {
         var btnModulus=findViewById<Button>(R.id.btn4)
 
         btnAdd.setOnClickListener {
-            var firstNumber=etFirstNumber.text.toString().toInt()
-            var secondNumber=etSecondNumber.text.toString().toInt()
-            var sum=firstNumber+secondNumber
-            tvResult.text="$sum"
+            if(etFirstNumber.text.toString() == "") {
+                Toast.makeText(baseContext,"Enter all digits",Toast.LENGTH_LONG).show()
+
+            } else if (etSecondNumber.text.toString() == ""){
+                Toast.makeText(baseContext,"Enter all digits",Toast.LENGTH_LONG).show()}
+            else {
+                var firstNumber = etFirstNumber.text.toString().toInt()
+                var secondNumber = etSecondNumber.text.toString().toInt()
+                var sum = firstNumber + secondNumber
+                tvResult.text = "$sum"
+            }
 
         }
         btnSubtract.setOnClickListener {
-            var firstNumber=etFirstNumber.text.toString().toInt()
-            var secondNumber=etSecondNumber.text.toString().toInt()
-            var sub=firstNumber-secondNumber
-            tvResult.text="$sub"
+            if(etFirstNumber.text.toString() == "") {
+                Toast.makeText(baseContext,"Enter all digits",Toast.LENGTH_LONG).show()
+
+            } else if (etSecondNumber.text.toString() == ""){
+                Toast.makeText(baseContext,"Enter all digits",Toast.LENGTH_LONG).show()
+            }else {
+                var firstNumber = etFirstNumber.text.toString().toInt()
+                var secondNumber = etSecondNumber.text.toString().toInt()
+                var sub = firstNumber - secondNumber
+                tvResult.text = "$sub"
+            }
 
         }
 //
         btnMultiply.setOnClickListener {
-            var firstNumber=etFirstNumber.text.toString().toInt()
-            var secondNumber=etSecondNumber.text.toString().toInt()
-            var multiply=firstNumber*secondNumber
-            tvResult.text="$multiply"
+            if(etFirstNumber.text.toString() == "") {
+                Toast.makeText(baseContext,"Enter all digits",Toast.LENGTH_LONG).show()
 
+            } else if (etSecondNumber.text.toString() == ""){
+                Toast.makeText(baseContext,"Enter all digits",Toast.LENGTH_LONG).show()
+            }else {
+                var firstNumber = etFirstNumber.text.toString().toInt()
+                var secondNumber = etSecondNumber.text.toString().toInt()
+                var multiply = firstNumber * secondNumber
+                tvResult.text = "$multiply"
 
+            }
 
         }
         btnModulus.setOnClickListener {
-            var firstNumber=etFirstNumber.text.toString().toInt()
-            var secondNumber=etSecondNumber.text.toString().toInt()
-            var modulus=firstNumber%secondNumber
-            tvResult.text="$modulus"
+            if(etFirstNumber.text.toString() == "") {
+                Toast.makeText(baseContext,"Enter all digits",Toast.LENGTH_LONG).show()
 
+            } else if (etSecondNumber.text.toString() == ""){
+                Toast.makeText(baseContext,"Enter all digits",Toast.LENGTH_LONG).show()
+            }else {
+                var firstNumber = etFirstNumber.text.toString().toInt()
+                var secondNumber = etSecondNumber.text.toString().toInt()
+                var modulus = firstNumber % secondNumber
+                tvResult.text = "$modulus"
 
+            }
         }
     }
 
